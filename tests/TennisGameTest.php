@@ -3,7 +3,6 @@ namespace Tests;
 
 use App\TennisGame;
 use PHPUnit\Framework\TestCase;
-use function PHPUnit\Framework\assertEquals;
 
 class TennisGameTest extends TestCase
 {
