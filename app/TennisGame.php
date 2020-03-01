@@ -8,7 +8,11 @@ class TennisGame
     if ($p1_score == 0 && $p2_score == 0) {
       return 'Love-All';
     }
-   
+  
+    if ($p1_score == 1 && $p2_score == 1) {
+      return 'Fifteen-All';
+    }
+
     return $this->getTextFromScore($p1_score).'-'.$this->getTextFromScore($p2_score);
      
   }
@@ -31,4 +35,7 @@ class TennisGame
     }
     return $result;
   }
+
+
+
 }
