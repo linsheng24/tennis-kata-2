@@ -13,6 +13,10 @@ class TennisGame
       return 'Fifteen-All';
     }
 
+    if ($p1_score == 2 && $p2_score ==2) {
+      return 'Thirty-All';
+    }
+
     return $this->getTextFromScore($p1_score).'-'.$this->getTextFromScore($p2_score);
      
   }
