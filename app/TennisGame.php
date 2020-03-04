@@ -27,12 +27,8 @@ class TennisGame
       3 => 'Forty'
     ];
 
-    if ($this->p1_score == 0 && $this->p2_score == 0) {
-      return 'Love-All';
-    }
-
-    if ($this->p1_score == 2 && $this->p2_score == 2) {
-      return 'Thirty-All';
+    if ($this->p1_score == $this->p2_score) {
+      return $scoreLookup[$this->p1_score] . '-All';
     }
 
     return $scoreLookup[$this->p1_score] . '-' . $scoreLookup[$this->p2_score];
