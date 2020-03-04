@@ -109,6 +109,28 @@ class TennisGameTest extends TestCase
     //Assert
     $this->assertEquals($expected, $actual);
   }
+  
+  /**
+   * @test
+   */
+  public function test_3vs3_deuce()
+  {
+    //Arrange
+    for($i=0;$i<3;$i++) {
+      $this->game->firstPlayerScore();
+    }
+
+    for($i=0;$i<3;$i++) {
+      $this->game->secondPlayerScore();
+    }
+
+    $expected = 'Deuce';
+    //Act
+    $actual = $this->game->score();
+    
+    //Assert
+    $this->assertEquals($expected, $actual);
+  }
 
 
 
