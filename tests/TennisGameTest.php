@@ -175,6 +175,28 @@ class TennisGameTest extends TestCase
     //Assert
     $this->assertEquals($expected, $actual);
   }
+  
+  /**
+   * @test
+   */
+  public function test_5vs4_advPlayer1()
+  {
+    //Arrange
+    for($i=0;$i<5;$i++) {
+      $this->game->firstPlayerScore();
+    }
+
+    for($i=0;$i<4;$i++) {
+      $this->game->secondPlayerScore();
+    }
+
+    $expected = 'Advantage player1';
+    //Act
+    $actual = $this->game->score();
+    
+    //Assert
+    $this->assertEquals($expected, $actual);
+  }
 
 
 
