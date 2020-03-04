@@ -39,6 +39,9 @@ class TennisGame
       return 'Advantage player1';
     }
 
+    if ($this->p1_score == 4 && $this->p2_score == 5) {
+      return 'Advantage player2';
+    }
 
     return $scoreLookup[$this->p1_score] . '-' . $scoreLookup[$this->p2_score];
 
