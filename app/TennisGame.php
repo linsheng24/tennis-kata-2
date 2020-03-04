@@ -31,13 +31,7 @@ class TennisGame
       return 'Love-All';
     }
 
-    if ($this->p2_score == 0) {
-      return $scoreLookup[$this->p1_score] . '-Love';
-    }
-
-    if ($this->p1_score == 2 && $this->p2_score == 1) {
-      return 'Thirty-Fifteen';
-    }
+    return $scoreLookup[$this->p1_score] . '-' . $scoreLookup[$this->p2_score];
 
   }
 
