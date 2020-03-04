@@ -88,6 +88,28 @@ class TennisGameTest extends TestCase
     $this->assertEquals($expected, $actual);
   }
 
+  /**
+   * @test
+   */
+  public function test_thirty_all()
+  {
+    //Arrange
+    for($i=0;$i<2;$i++) {
+      $this->game->firstPlayerScore();
+    }
+
+    for($i=0;$i<2;$i++) {
+      $this->game->secondPlayerScore();
+    }
+
+    $expected = 'Thirty-All';
+    //Act
+    $actual = $this->game->score();
+    
+    //Assert
+    $this->assertEquals($expected, $actual);
+  }
+
 
 
 }
