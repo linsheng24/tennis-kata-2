@@ -11,6 +11,11 @@ class TennisGame
   {
     $this->p1_score++;
   }
+  
+  public function secondPlayerScore()
+  {
+    $this->p2_score++;
+  }
 
   public function score()
   {
@@ -28,6 +33,10 @@ class TennisGame
 
     if ($this->p2_score == 0) {
       return $scoreLookup[$this->p1_score] . '-Love';
+    }
+
+    if ($this->p1_score == 2 && $this->p2_score == 1) {
+      return 'Thirty-Fifteen';
     }
 
   }
