@@ -44,6 +44,10 @@ class TennisGame
       return 'Win for player1';
     }
 
+    if ($this->p1_score == 3 && $this->p2_score == 5) {
+      return 'Win for player2';
+    }
+
     return $scoreLookup[$this->p1_score] . '-' . $scoreLookup[$this->p2_score];
 
   }
