@@ -40,13 +40,10 @@ class TennisGame
       return 'Advantage ' . $adv;
     }
 
-    if ($this->p1_score == 4 && $this->p2_score == 2) {
+    if ($this->p1_score >=4 && $this->p1_score - $this->p2_score >= 2) {
       return 'Win for player1';
     }
-    
-    if ($this->p1_score == 5 && $this->p2_score == 2) {
-      return 'Win for player1';
-    }
+
     return $scoreLookup[$this->p1_score] . '-' . $scoreLookup[$this->p2_score];
 
   }
