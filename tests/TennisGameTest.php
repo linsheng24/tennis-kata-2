@@ -41,7 +41,24 @@ class TennisGameTest extends TestCase
     $this->game->firstPlayerScore();
 
     $expected = 'Fifteen-Love';
+    //Act
+    $actual = $this->game->score();
     
+    //Assert
+    $this->assertEquals($expected, $actual);
+  }
+  
+  /**
+   * @test
+   */
+  public function test_thirty_love()
+  {
+    //Arrange
+    for($i=0;$i<2;$i++) {
+      $this->game->firstPlayerScore();
+    }
+
+    $expected = 'Thirty-Love';
     //Act
     $actual = $this->game->score();
     
